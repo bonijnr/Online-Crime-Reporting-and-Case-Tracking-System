@@ -1,4 +1,4 @@
-#Online-Crime-Reporting-and-Case-Tracking-System
+Online-Crime-Reporting-and-Case-Tracking-System
 
 Project Description
 
@@ -36,4 +36,4 @@ This is a frontend demonstration project. Reports are stored in the browser's lo
 Project Purpose
 
 This project demonstrates how technology can be used to simplify crime reporting and improve the organization and tracking of reported cases.
-live(onlinecrimereportsystem.netlify.app)
+live (onlinecrimereportsystem.netlify.app)
