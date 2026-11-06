@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeReport | Crime Reporting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">S</span><div><strong>SafeReport</strong><small>Crime Reporting & Case Tracking</small></div></div>
+    <nav><a href="#report">Report a Crime</a><a href="#track">Track a Case</a><a href="#manage">Manage Cases</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">SIMPLE • SAFE • ORGANIZED</p>
+        <h1>Report an incident.<br><span>Track its progress.</span></h1>
+        <p class="hero-copy">A simple demonstration website for submitting a crime report and checking its case status.</p>
+        <a class="primary-link" href="#report">Submit a Report <span>→</span></a>
+      </div>
+      <div class="hero-card">
+        <div class="shield">✓</div>
+        <h3>Your report, organized</h3>
+        <p>Every submitted report receives a unique reference number for tracking.</p>
+        <div class="mini-stat"><span class="dot"></span> Case tracking available</div>
+      </div>
+    </section>
+
+    <section class="notice"><strong>Important:</strong> This is a student demonstration project. Do not enter real names, addresses, or sensitive information. It is not connected to the police or an emergency service. For immediate danger, contact your local emergency service.</section>
+
+    <section class="section-grid">
+      <section class="panel" id="report">
+        <div class="section-heading"><span class="step">01</span><div><h2>Submit a report</h2><p>Provide basic information about the incident.</p></div></div>
+        <form id="reportForm">
+          <label for="category">Incident category</label>
+          <select id="category" required>
+            <option value="">Choose a category</option>
+            <option>Theft</option><option>Fraud</option><option>Assault</option>
+            <option>Vandalism</option><option>Cybercrime</option><option>Other</option>
+          </select>
+          <label for="location">General incident location</label>
+          <input id="location" type="text" placeholder="e.g. Central area" required>
+          <label for="date">Incident date</label>
+          <input id="date" type="date" required>
+          <label for="description">Description</label>
+          <textarea id="description" rows="4" placeholder="Describe what happened (demo information only)" required></textarea>
+          <label for="contact">Contact detail (optional demo)</label>
+          <input id="contact" type="text" placeholder="Optional; do not use real personal details">
+          <button class="primary-button" type="submit">Submit Report</button>
+          <p class="form-message" id="reportMessage" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="panel track-panel" id="track">
+        <div class="section-heading"><span class="step">02</span><div><h2>Track a case</h2><p>Enter the reference number you received.</p></div></div>
+        <form id="trackForm">
+          <label for="reference">Case reference number</label>
+          <input id="reference" type="text" placeholder="e.g. SR-123456" required>
+          <button class="secondary-button" type="submit">Check Status</button>
+        </form>
+        <div id="trackResult" class="track-result empty">Your case information will appear here.</div>
+        <div class="status-guide"><strong>Status guide</strong><p><span class="pill submitted">Submitted</span> Report received</p><p><span class="pill reviewing">Under Review</span> Being checked</p><p><span class="pill resolved">Resolved</span> Marked as resolved</p></div>
+      </section>
+    </section>
+
+    <section class="panel manage-panel" id="manage">
+      <div class="section-heading"><span class="step">03</span><div><h2>Manage cases</h2><p>Demo administrator area: view reports and change their status.</p></div></div>
+      <div class="admin-note">For demonstration only. A real system would require secure administrator login and a protected database.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Reference</th><th>Category</th><th>Date</th><th>Status</th><th>Update status</th></tr></thead>
+          <tbody id="casesTable"><tr><td colspan="5" class="empty-cell">No reports submitted yet.</td></tr></tbody>
+        </table>
+      </div>
+      <button id="clearDemo" class="text-button" type="button">Clear demo reports</button>
+    </section>
+  </main>
+
+  <footer><strong>SafeReport</strong><span>HND II student project prototype • Front-end demonstration</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
